@@ -1,27 +1,23 @@
 #include "main.h"
 
 /**
- * _putchar - Writes a character to the standard output (stdout)
- * @c: The character to be written
- * Return: On success, 1. On error, -1.
- *
+ * more_numbers - prints 10 times the numbers, from 0 to 14
+ * followed by a new line
+ * Description: Can only use _putchar 3 times
  */
 
-int _putchar(char c)
+void more_numbers(void)
 {
-	return write(1, &c, 1);
-}
+	int i, j;
 
-void print_most_numbers(void)
-{
-	int i;
-
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i < 10; i++)
 	{
-		if (i != 2 && i != 4)
-			_putchar(i + '0');
+		for (j = 0; j < 15; j++)
+		{
+			if (j >= 10)
+				_putchar(j / 10 + '0');
+			_putchar(j % 10 + '0');
+		}
+		_putchar('\n');
 	}
-
-	_putchar('\n');
 }
-

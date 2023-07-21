@@ -7,6 +7,11 @@
  *
  */
 
+int _putchar(char c)
+{
+	return write(1, &c, 1);
+}
+
 void print_most_numbers(void)
 {
 	int i;

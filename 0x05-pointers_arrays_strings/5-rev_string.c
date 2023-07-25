@@ -1,29 +1,29 @@
 #include "main.h"
 
 /**
- * reverse_string - Reverses a string in place.
- * @s: The string to be reversed.
+ * rev_string - reverses a string
+ * @s: string to be reversed
  */
-void reverse_string(char *s)
-{
-	char *start = s;
-	char *end = s;
-	char tmp;
 
-	/* Find the end of the string using the pointer 'end'. */
-	while (*(end + 1) != '\0')
+void rev_string(char *s)
+{
+	char tmp;
+	int i, len, len1;
+
+	len = 0;
+	len1 = 0;
+
+	while (s[len] != '\0')
 	{
-		end++;
+		len++;
 	}
 
-	/* Swap characters using the two pointers 'start' and 'end'. */
-	while (start < end)
-	{
-		tmp = *start;
-		*start = *end;
-		*end = tmp;
+	len1 = len - 1;
 
-		start++;
-		end--;
+	for (i = 0; i < len / 2; i++)
+	{
+		tmp = s[i];
+		s[i] = s[len1];
+		s[len1--] = tmp;
 	}
 }

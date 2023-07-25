@@ -1,43 +1,29 @@
-/* main.h (assumed to contain the function prototype for _putchar) */
-
-/* Function to print every other character of a string */
-void puts2(char *str);
-
-
-/* main.c */
-
 #include "main.h"
 
 /**
- * puts2 - Prints every other character of a string
- * @str: The input string
+ * reverse_string - Reverses a string in place.
+ * @s: The string to be reversed.
  */
-void puts2(char *str)
+void reverse_string(char *s)
 {
-    int i = 0;
+	char *start = s;
+	char *end = s;
+	char tmp;
 
-    while (str[i] != '\0')
-    {
-        if (i % 2 == 0) /* Print every other character (even-indexed characters) */
-        {
-            _putchar(str[i]);
-        }
-        i++;
-    }
+	/* Find the end of the string using the pointer 'end'. */
+	while (*(end + 1) != '\0')
+	{
+		end++;
+	}
 
-    _putchar('\n'); /* Print a newline after printing the characters */
-}
+	/* Swap characters using the two pointers 'start' and 'end'. */
+	while (start < end)
+	{
+		tmp = *start;
+		*start = *end;
+		*end = tmp;
 
-/**
- * main - Check the code
- *
- * Return: Always 0
- */
-int main(void)
-{
-    char *str;
-
-    str = "0123456789";
-    puts2(str);
-    return (0);
+		start++;
+		end--;
+	}
 }

@@ -9,8 +9,6 @@ void reverse_string(char *s)
 	char *start = s;
 	char *end = s;
 	char tmp;
-
-	/* Find the end of the string using the pointer 'end'. */
 	while (*(end + 1) != '\0')
 	{
 		end++;

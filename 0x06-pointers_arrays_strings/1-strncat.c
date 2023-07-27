@@ -24,5 +24,5 @@ char *_strncat(char *dest, char *src, int n)
 	/* Null-terminate the destination string after concatenation */
 		dest[dest_len + i] = '\0';
 
-		return dest;
+		return (dest);
 }

@@ -6,19 +6,15 @@
  * @a: Pointer to the array of integers.
  * @n: The number of elements in the array.
  */
+
 void reverse_array(int *a, int n)
 {
-	int start = 0;
-	int end = n - 1;
-	int temp;
+	int i, j;
 
-	while (start < end)
+	for (i = 0, j = n - 1; i < j; i++, j--)
 	{
-		temp = a[start];
-		a[start] = a[end];
-		a[end] = temp;
-
-		start++;
-		end--;
+		int temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
 	}
 }

@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * print_array - Print an array of integers
- * @a: An array of integers
- * @n: The number of elements to print
+ * main - check the code
+ * @a: an array of integers
+ * @n: the number of elements to swap
  *
- * Return: Nothing
+ * Return: nothing.
  */
 void print_array(int *a, int n)
 {
@@ -16,7 +16,9 @@ void print_array(int *a, int n)
 	while (i < n)
 	{
 		if (i != 0)
+		{
 			printf(", ");
+		}
 		printf("%d", a[i]);
 		i++;
 	}
@@ -24,44 +26,16 @@ void print_array(int *a, int n)
 }
 
 /**
- * reverse_array - Reverse the order of elements in an array
- * @a: An array of integers
- * @n: The number of elements in the array
+ * main - check the code
  *
- * Return: Nothing
- */
-void reverse_array(int *a, int n)
-{
-	int start = 0;
-	int end = n - 1;
-	int temp;
-
-	while (start < end)
-	{
-		/* Swap the elements at indices 'start' and 'end' */
-		temp = a[start];
-		a[start] = a[end];
-		a[end] = temp;
-
-		/* Move to the next pair of elements */
-		start++;
-		end--;
-	}
-}
-
-/**
- * main - Entry point of the program
- *
- * Return: Always 0
+ * Return: Always 0.
  */
 int main(void)
 {
 	int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
-	int size = sizeof(a) / sizeof(int);
 
-	print_array(a, size);
-	reverse_array(a, size);
-	print_array(a, size);
-
+	print_array(a, sizeof(a) / sizeof(int));
+	reverse_array(a, sizeof(a) / sizeof(int));
+	print_array(a, sizeof(a) / sizeof(int));
 	return (0);
 }

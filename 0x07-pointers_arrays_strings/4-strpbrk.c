@@ -10,8 +10,8 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	if (s == NULL || accept == NULL)
-		return (NULL);
+	if (s == '\0' || accept == '\0')
+		return ('\0');
 
 	while (*s != '\0')
 	{
@@ -27,5 +27,5 @@ char *_strpbrk(char *s, char *accept)
 		s++;
 	}
 
-	return (NULL); /* Byte not found */
+	return ('\0'); /* Byte not found */
 }

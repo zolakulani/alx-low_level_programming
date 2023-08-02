@@ -26,10 +26,11 @@ int _is_palindrome(char *start, char *end)
  */
 int is_palindrome(char *s)
 {
+	char *end = s;
+
 	if (*s == '\0') /* Handle NULL input. */
 		return (0);
 
-	char *end = s;
 	while (*end != '\0')
 		end++;
 

@@ -12,7 +12,7 @@ int is_palindrome(char *s)
 	char *start = s;
 	char *end = s;
 
-	if (s == '\0') /* Handle NULL input. */
+	if (*s == '\0') /* Handle NULL input. */
 		return (0);
 
 	/* Find the end of the string. */

@@ -19,6 +19,20 @@ int _is_palindrome(char *start, char *end)
 }
 
 /**
+ * _strlen - Helper function to calculate the length of a string recursively.
+ * @s: The input string.
+ *
+ * Return: The length of the string.
+ */
+int _strlen(char *s)
+{
+	if (*s == '\0')
+		return (0);
+
+	return (1 + _strlen(s + 1));
+}
+
+/**
  * is_palindrome - Check if a string is a palindrome.
  * @s: The string to check.
  *
@@ -26,15 +40,12 @@ int _is_palindrome(char *start, char *end)
  */
 int is_palindrome(char *s)
 {
-	char *end = s;
+	int length = _strlen(s);
+
+	char *end = s + length - 1;
 
 	if (*s == '\0') /* Handle NULL input. */
 		return (0);
-
-	while (*end != '\0')
-		end++;
-
-	end--;
 
 	return (_is_palindrome(s, end));
 }

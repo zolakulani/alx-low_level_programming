@@ -15,7 +15,7 @@ int _is_palindrome(char *start, char *end)
 	if (*start != *end)
 		return (0); /* Not a palindrome. */
 
-	return (_is_palindrome(start + 1, end - 1)); /* Recursively check next characters. */
+	return (_is_palindrome(start + 1, end - 1));
 }
 
 /**
@@ -31,10 +31,9 @@ int is_palindrome(char *s)
 
 	char *end = s;
 	while (*end != '\0')
-	{
 		end++;
-	}
-	end--; /* Move end back to the last character of the string. */
+
+	end--;
 
 	return (_is_palindrome(s, end));
 }

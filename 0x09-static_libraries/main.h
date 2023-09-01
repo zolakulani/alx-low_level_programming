@@ -2,7 +2,7 @@
 #define MAIN_H
 #include <stddef.h>
 #include <stdio.h>
-#include <string>
+#include <string.h>
 
 int _putchar(char c);
 int _islower(int c);

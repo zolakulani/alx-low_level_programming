@@ -11,12 +11,12 @@
  *              the dog's name, age, and owner.
  */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+}dog_;
 	/* Additional function prototypes */
 	int _putchar(char c);
 	void init_dog(struct dog *d, char *name, float age, char *owner);

@@ -2,19 +2,19 @@
 #include "lists.h"
 
 /**
- * list_len - returns the number of elements in a linked list
- * @h: pointer to the list_t list
+ * list_len -  kuma the lenght of a list
+ * @h: komba to the list_t list
  *
- * Return: number of elements in h
+ * Return: nhlayo of elements in h
  */
 size_t list_len(const list_t *h)
 {
-	size_t n = 0;
+	size_t no_desc = 0;
 
-	while (h)
+	while (h != NULL)
 	{
-		n++;
 		h = h->next;
+		no_desc++;
 	}
-	return (n);
+	return (no_desc);
 }

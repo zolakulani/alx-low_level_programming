@@ -7,15 +7,16 @@
  * Return: the total number of nodes in the list_
  */
 
-size_t print_listint(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
+	const listint_t *temp_k = h;
 	size_t count_k = 0;
 
-	while (h != NULL)
+	while (temp_k != NULL)
 	{
 		printf("%i\n", h->n);
-		h = h->next;
 		count_k++;
+		temp_k = temp_k->next;
 	}
 	return (count_k);
 }

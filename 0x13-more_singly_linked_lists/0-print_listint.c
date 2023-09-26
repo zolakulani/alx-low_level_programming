@@ -9,13 +9,12 @@
 
 size_t listint_len(const listint_t *h)
 {
-	const listint_t *temp_k = h;
 	size_t count_k = 0;
 
-	while (temp_k != NULL)
+	while (h != NULL)
 	{
-		printf("%d\n", temp_k->n);
-		temp_k = temp_k->next;
+		printf("%d\n", h->n);
+		h = h->next;
 		count_k++;
 	}
 	return (count_k);

@@ -16,9 +16,24 @@
 
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
+
+/**
+ * struct listp_s - represented singly linked list
+ * @p: represents the pointers of the nodes in the list
+ * @next: which points to the next node in the list
+ *
+ * Description: This structure is used to create a singly linked list composed of pointers.
+ */
+
+
+typedef struct listp_s
+{
+	void *pt_r;
+	struct listp_s *next;
+} listp_t;
 
 size_t listint_len(const listint_t *h);
 size_t print_listint(const listint_t *h);

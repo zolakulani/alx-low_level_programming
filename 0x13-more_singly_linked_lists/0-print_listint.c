@@ -4,7 +4,7 @@
  * print_listint - is used to display all the elements in a linked list
  * @h: represents the head of the list
  *
- * Return: the number of nodes
+ * Return: the numbe_r of nodes
  */
 size_t print_listint(const listint_t *h)
 {
@@ -14,7 +14,7 @@ size_t print_listint(const listint_t *h)
 	while (temp_k != NULL)
 	{
 		printf("%d\n", temp_k->n);
-		count_k += 1;
+		count_k++;
 		temp_k = temp_k->next;
 	}
 	return (count_k);

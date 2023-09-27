@@ -1,34 +1,56 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
- * main - multiplies two positive numbers
- * @argc: n arguments
- * @argv: args
- * Return: int
+ * _isdigit - checks if a string contains only digits.
+ * @argv: pointer to the string to check
+ * Return: 1 if not all digits, 0 if all digits
+ */
+int _isdigit(char *argv[])
+{
+	int k = 0;
+
+	while (argv[k])
+	{
+		int i = 0;
+		while (argv[k][i])
+		{
+			if (!(argv[k][i] >= '0' && argv[k][i] <= '9'))
+				return (1); /* Return 1 if a non-digit character is found */
+			i++;
+		}
+		k++;
+	}
+	return (0); /* Return 0 if all characters are digits */
+}
+
+/**
+ * main - entry point of the program
+ * @argc: the number of command-line arguments
+ * @argv: an array containing the command-line arguments
+ * Return: 0 for success, 1 for an error
  */
 int main(int argc, char *argv[])
 {
-	unsigned long mul;
-	int i, j;
+	int k;
 
 	if (argc != 3)
-	{printf("Error\n");
-	exit(98);
-	}
-	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		printf("Error: Please provide exactly two arguments.\n");
+		return (1); /* Return an error code */
+	}
+
+	for (k = 1; k < argc; k++)
+	{
+		if (_isdigit(argv))
 		{
-			if (argv[i][j] > 57 || argv[i][j] < 48)
-			{
-				printf("Error\n");
-				exit(98);
-			}
+			printf("Error: Argument %d is not a valid digit.\n", k);
+			return (1); /* Return an error code */
 		}
 	}
 
-	mul = atol(argv[1]) * atol(argv[2]);
-	printf("%lu\n", mul);
+	/* Perform your desired operations here if needed */
 
-	return (0);
-
+	return (0); /* Return 0 for success */
 }
+

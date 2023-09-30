@@ -1,4 +1,4 @@
-#include "header.h"
+#include "main.h"
 /**
  * print_binary - Display binary numbers
  * @n: number to be displyed_
@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 
 	if (n & 1)
 	{
-		_puttchar('1');
+		_putchar('1');
 	}
 	else
 	{

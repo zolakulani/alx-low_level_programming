@@ -1,7 +1,6 @@
-#include <header.h>
+#include "header.h"
 /**
- *
- * print_binart - Display binary numbers
+ * print_binary - Display binary numbers
  * @n: number to be displyed_
  *
  * Return: void

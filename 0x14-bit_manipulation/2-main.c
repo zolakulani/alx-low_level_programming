@@ -1,4 +1,3 @@
-lien@ubuntu:~/0x14. Binary$ cat 2-main.c
 #include <stdio.h>
 #include "main.h"
 
